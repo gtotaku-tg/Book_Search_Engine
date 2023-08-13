@@ -16,6 +16,8 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+    "@apollo/client": "^3.8.1",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "apollo-server-express": "^2.15.0",
     "dotenv": "^16.3.1"
   }
