@@ -13,21 +13,9 @@ Week-21 Challenge (MERN)
 
 - [Technologies-Used](#technologies-used)
 
-- [Installation](#installation)
 
 - [Credits](#credits)
 
-- [Features](#features)
-
-- [Usage-Information](#usage-information)
-
-- [Suggested-Future-Development](#suggested-future-development)
-
-- [Contribution-Guidelines](#contribution-guidelines)
-
-- [Test-Instructions](#test-instructions)
-
-- [License](#license)
 
 - [Questions](#questions)
 
@@ -67,12 +55,6 @@ CSS and Bootstrap  were utilized to create the overall styling of the user inter
 ## Credits
 
 AskBCS  helped me trouble shoot Heroku deployment issues, as i didn't firstly connected to mongodb.
-
-
-
-
-
-
 
 
 
