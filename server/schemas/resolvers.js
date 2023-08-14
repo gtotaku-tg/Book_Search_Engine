@@ -7,8 +7,7 @@ const resolvers = {
         me: async (parent, args, context) => {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
-                    .select("-__v -password")
-                    .populate("savedBooks");
+                    .select("-__v -password");
 
                 return userData;
             }
@@ -17,6 +16,12 @@ const resolvers = {
         }
     },
     Mutation: {
+        addUser: async (parent, args) => {
+            const user = await User.create(args);
+            const token = signToken(user);
+
+            return { user, token };
+        },
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
             if (!user) {
@@ -31,12 +36,7 @@ const resolvers = {
             const token = signToken(user);
             return { user, token };
         },
-        addUser: async (parent, args) => {
-            const user = await User.create(args);
-            const token = signToken(user);
-
-            return { user, token };
-        },
+        
         saveBook: async (parent, { bookData }, context) => {
             if (context.user) {
                 const updateUser = await User.findByIdAndUpdate(
